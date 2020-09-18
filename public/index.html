@@ -9,4 +9,21 @@
         <p> Welcome to the chat application</p>
     </body>
 
+    <!-- loading socket io library -->
+    <script src="/socket.io/socket.io.js"> </script>
+
+    <script>
+        var socket=io();   //initiating a connection
+        
+        socket.on('connect', ()=>{
+            console.log('Client connected to the server') //logged in developer tools console
+        })
+
+        socket.on('disconnect', ()=>{
+            console.log('Client disconnected from server')
+        })
+
+    
+    </script>
+
 </html>
